@@ -22,6 +22,7 @@ mobileMenu?.querySelectorAll('a').forEach((link) => link.addEventListener('click
   iconInit();
 }));
 
+
 if (!reducedMotion && window.matchMedia('(pointer: fine)').matches) {
   const dot = document.querySelector('.cursor-dot');
   const ring = document.querySelector('.cursor-ring');
@@ -71,16 +72,20 @@ document.querySelectorAll('.tilt-card').forEach((card) => {
 });
 
 const form = document.querySelector('#contact-form');
-form?.addEventListener('submit', (event) => {
+const contactEmail = 'mukesh.softwaredev@gmail.com';
+
+function send(event) {
   event.preventDefault();
   const feedback = form.querySelector('.form-feedback');
   const data = new FormData(form);
   const subject = encodeURIComponent(`Portfolio enquiry from ${data.get('name')}`);
   const body = encodeURIComponent(`${data.get('message')}\n\nReply to: ${data.get('email')}`);
   feedback.textContent = 'Opening your email client…';
-  window.location.href = `mailto:mukesh@example.com?subject=${subject}&body=${body}`;
+  window.location.href = `mailto:${contactEmail}?subject=${subject}&body=${body}`;
   setTimeout(() => { feedback.textContent = 'Thanks — your message is ready to send.'; form.reset(); }, 600);
-});
+}
+
+form?.addEventListener('submit', send);
 
 const canvas = document.querySelector('#hero-canvas');
 const scene = new THREE.Scene();
