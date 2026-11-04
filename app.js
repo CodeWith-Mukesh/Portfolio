@@ -4,8 +4,54 @@ const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matc
 const iconInit = () => window.lucide?.createIcons();
 iconInit();
 
+document.querySelectorAll('#skills, #skills *').forEach((element) => {
+  element.style.opacity = '1';
+  element.style.visibility = 'visible';
+  element.style.transform = 'none';
+});
+
 const header = document.querySelector('.site-header');
 window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 20), { passive: true });
+
+const credentialModal = document.querySelector('#credential-modal');
+const credentialModalTitle = document.querySelector('#credential-modal-title');
+const credentialModalImage = document.querySelector('#credential-modal-image');
+let lastCredentialCard = null;
+
+const closeCredentialModal = () => {
+  if (!credentialModal) return;
+  credentialModal.hidden = true;
+  document.body.style.overflow = '';
+  lastCredentialCard?.focus();
+};
+
+const openCredentialModal = (card) => {
+  if (!credentialModal || !credentialModalTitle || !credentialModalImage) return;
+  lastCredentialCard = card;
+  credentialModalTitle.textContent = card.dataset.credentialTitle || 'Credential';
+  credentialModalImage.src = card.dataset.credentialImage || '';
+  credentialModalImage.alt = `${credentialModalTitle.textContent} certificate`;
+  credentialModal.hidden = false;
+  document.body.style.overflow = 'hidden';
+  credentialModal.querySelector('.credential-modal-close')?.focus();
+};
+
+document.querySelectorAll('.credential-card').forEach((card) => {
+  card.addEventListener('click', () => openCredentialModal(card));
+  card.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      openCredentialModal(card);
+    }
+  });
+});
+
+credentialModal?.querySelectorAll('[data-close-credential]').forEach((element) => {
+  element.addEventListener('click', closeCredentialModal);
+});
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && credentialModal && !credentialModal.hidden) closeCredentialModal();
+});
 
 const menuToggle = document.querySelector('.menu-toggle');
 const mobileMenu = document.querySelector('.mobile-menu');
@@ -51,10 +97,15 @@ if (window.gsap && !reducedMotion) {
   gsap.registerPlugin(ScrollTrigger);
   gsap.from('.reveal', { opacity: 0, y: 25, duration: .9, stagger: .12, ease: 'power3.out', delay: .15 });
   gsap.utils.toArray('.content-section').forEach((section) => {
-    const targets = section.querySelectorAll('.section-heading,.skill-card,.timeline-item,.project-card,.about-layout,.about-facts,.contact-layout');
+    const targets = section.querySelectorAll('.section-heading,.timeline-item,.project-card,.about-layout,.about-facts,.contact-layout');
     if (targets.length) {
       gsap.from(targets, {
-        scrollTrigger: { trigger: section, start: 'top 78%' }, opacity: 0, y: 35, duration: .8, stagger: .08, ease: 'power3.out'
+        scrollTrigger: { trigger: section, start: 'top 78%' }, 
+        opacity: 0,
+         y: 35,
+          duration: .8, 
+          stagger: .08, 
+          ease: 'power3.out'
       });
     }
   });

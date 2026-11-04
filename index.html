@@ -24,17 +24,22 @@
   <aside class="profile-rail">
     <a class="brand magnetic" href="#home">MY<span>.</span></a>
     <div class="profile-card">
-      <div class="profile-photo" role="img" aria-label="Profile photograph placeholder"><span>MY</span><i
+      <div class="profile-photo"><img src="Mukesh1.png" alt="Portrait of Mukesh Yadav"><i
           data-lucide="plus"></i></div>
       <p class="profile-kicker">FULL STACK DEVELOPER<br />&amp; AI ENTHUSIAST</p>
       <h2>Mukesh<br /><em>Yadav.</em></h2>
       <p class="profile-bio">Building digital experiences powered by code, creativity and AI.</p>
       <div class="profile-location"><i data-lucide="map-pin"></i> Mumbai, India</div>
-      <div class="profile-links"><a href="https://github.com/CodeWith-Mukesh" target="_blank" rel="noreferrer" class="magnetic"
-          aria-label="GitHub"><i data-lucide="code-2"></i></a><a href="https://www.linkedin.com/in/mukesh-yadav-66a172398/" target="_blank"
-          rel="noreferrer" class="magnetic" aria-label="LinkedIn"><i data-lucide="briefcase-business"></i></a><a
-          href="mailto:mukesh.softwaredev@gmail.com" class="magnetic" aria-label="Email"><i data-lucide="mail"></i></a></div>
-      <a href="resume.pdf" download class="profile-resume magnetic">Download Resume <i
+      <div class="profile-links">
+          <a href="https://github.com/CodeWith-Mukesh" target="_blank" rel="noreferrer" class="magnetic"
+          aria-label="GitHub" data-tooltip="GitHub" title="GitHub">
+          <i data-lucide="code-2"></i></a>
+          <a href="https://www.linkedin.com/in/mukesh-yadav-66a172398/" target="_blank"
+          rel="noreferrer" class="magnetic" aria-label="LinkedIn" data-tooltip="LinkedIn" title="LinkedIn">
+          <i data-lucide="briefcase-business"></i></a>
+          <a href="mailto:mukesh.softwaredev@gmail.com" class="magnetic" aria-label="Email" data-tooltip="Email" title="Email">
+            <i data-lucide="mail"></i></a></div>
+      <a href="Mukesh_Resume.pdf" download class="profile-resume magnetic">Download Resume <i
           data-lucide="arrow-up-right"></i></a>
     </div>
     <p class="rail-note">© 2024 / MUKESH YADAV</p>
@@ -43,19 +48,20 @@
   <header class="site-header" id="top">
     <span class="mobile-brand">MY<span>.</span></span>
     <nav aria-label="Primary navigation"><a href="#home">Home</a><a href="#about">About</a><a
-        href="#resume">Resume</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a
+        href="#resume">Resume</a><a href="#credentials">Credentials</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a
         href="#contact">Contact</a></nav>
     <a href="#contact" class="header-cta magnetic">Let's talk <i data-lucide="arrow-up-right"></i></a>
     <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><i data-lucide="menu"></i></button>
   </header>
   <div class="mobile-menu"><a href="#home">Home</a><a href="#about">About</a><a href="#resume">Resume</a><a
-      href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div>
+      href="#credentials">Credentials</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a
+      href="#contact">Contact</a></div>
 
   <main class="page">
     <section class="hero content-section" id="home">
       <div class="hero-orb orb-a"></div>
       <div class="hero-orb orb-b"></div>
-      <div class="section-label"><span>01</span> HOME / INTRO</div>
+      <div class="section-label"><br><br><span>01</span> HOME / INTRO</div>
       <div class="hero-copy">
         <p class="eyebrow reveal"><span class="pulse"></span> Open to thoughtful opportunities</p>
         <h1 class="reveal">Hello, I’m<br /><em>Mukesh.</em></h1>
@@ -130,12 +136,56 @@
           </article>
         </div>
       </div>
-      <p class="record-note"><i data-lucide="info"></i> Internship and certification details will be added when verified
-        records are available.</p>
+    </section>
+
+    <section class="content-section credentials-section" id="credentials">
+      <div class="section-label"><span>04</span> CREDENTIALS / PROOF OF WORK</div>
+      <div class="section-heading">
+        <p class="eyebrow">Learning in public</p>
+        <h2>Experience worth<br /><em>showing.</em></h2>
+      </div>
+      <div class="credentials-grid">
+        <article class="credential-card credential-featured" tabindex="0" role="button" aria-label="View Artificial Intelligence Internship certificate" data-credential-title="Artificial Intelligence Internship" data-credential-image="assests/Internships/Inamigos.jpg">
+          <div class="credential-image"><img src="assests/Internships/Inamigos.jpg" alt="Certificate of Artificial Intelligence Internship at InAmigos Foundation" loading="lazy" /></div>
+          <div class="credential-copy">
+            <span class="credential-type">INTERNSHIP / 2026</span>
+            <h3>Artificial Intelligence Internship</h3>
+            <p>Completed an Artificial Intelligence internship at InAmigos Foundation from 21 September to 05 October 2026.</p>
+            <span class="credential-issuer">InAmigos Foundation</span>
+          </div>
+        </article>
+        <article class="credential-card" tabindex="0" role="button" aria-label="View Harvard CS50 Python certificate" data-credential-title="CS50’s Introduction to Programming with Python" data-credential-image="assests/Certifications/HarvardPY.jpg">
+          <div class="credential-image"><img src="assests/Certifications/HarvardPY.jpg" alt="Harvard CS50 certificate for Introduction to Programming with Python" loading="lazy" /></div>
+          <div class="credential-copy">
+            <span class="credential-type">CERTIFICATION / 2026</span>
+            <h3>CS50’s Introduction to Programming with Python</h3>
+            <p>Completed Harvard’s CS50P course, including problem sets and a final project.</p>
+            <span class="credential-issuer">Harvard University</span>
+          </div>
+        </article>
+        <article class="credential-card" tabindex="0" role="button" aria-label="View AI Classroom Foundation Course certificate" data-credential-title="AI Classroom Foundation Course" data-credential-image="assests/Certifications/JioAiFoundation.jpg">
+          <div class="credential-image"><img src="assests/Certifications/JioAiFoundation.jpg" alt="Jio AI Classroom Foundation Course certificate" loading="lazy" /></div>
+          <div class="credential-copy">
+            <span class="credential-type">CERTIFICATION / SEPT 2026</span>
+            <h3>AI Classroom Foundation Course</h3>
+            <p>Completed foundational learning in artificial intelligence through the Jio AI Classroom programme.</p>
+            <span class="credential-issuer">Jio Institute</span>
+          </div>
+        </article>
+        <article class="credential-card" tabindex="0" role="button" aria-label="View Work Smarter with AI certificate" data-credential-title="Work Smarter with AI" data-credential-image="assests/Certifications/Canva.jpg">
+          <div class="credential-image"><img src="assests/Certifications/Canva.jpg" alt="Canva Work smarter with AI certificate" loading="lazy" /></div>
+          <div class="credential-copy">
+            <span class="credential-type">CERTIFICATION / SEPT 2026</span>
+            <h3>Work Smarter with AI</h3>
+            <p>Completed Canva Design School’s introductory AI training course.</p>
+            <span class="credential-issuer">Canva Design School</span>
+          </div>
+        </article>
+      </div>
     </section>
 
     <section class="content-section skills-section" id="skills">
-      <div class="section-label"><span>04</span> SKILLS / TOOLKIT</div>
+      <div class="section-label"><span>05</span> SKILLS / TOOLKIT</div>
       <div class="section-heading">
         <p class="eyebrow">What I work with</p>
         <h2>Tools for<br /><em>the journey.</em></h2>
@@ -170,7 +220,7 @@
     </section>
 
     <section class="content-section projects-section" id="projects">
-      <div class="section-label"><span>05</span> PROJECTS / SELECTED WORK</div>
+      <div class="section-label"><span>06</span> PROJECTS / SELECTED WORK</div>
       <div class="section-heading project-heading">
         <p class="eyebrow">Built with intent</p>
         <h2>Ideas that became<br /><em>experiments.</em></h2>
@@ -222,7 +272,7 @@
     </section>
 
     <section class="content-section contact-section" id="contact">
-      <div class="section-label"><span>06</span> CONTACT / SAY HELLO</div>
+      <div class="section-label"><span>07</span> CONTACT / SAY HELLO</div>
       <div class="contact-deco">✳</div>
       <div class="contact-layout">
         <div>
@@ -245,6 +295,15 @@
       </div>
     </section>
   </main>
+  <div class="credential-modal" id="credential-modal" role="dialog" aria-modal="true" aria-labelledby="credential-modal-title" hidden>
+    <div class="credential-modal-backdrop" data-close-credential></div>
+    <div class="credential-modal-panel">
+      <button class="credential-modal-close" type="button" aria-label="Close certificate preview" data-close-credential><i data-lucide="x"></i></button>
+      <p class="eyebrow">Credential preview</p>
+      <h2 id="credential-modal-title"></h2>
+      <div class="credential-modal-image"><img id="credential-modal-image" alt="" /></div>
+    </div>
+  </div>
   <footer class="site-footer"><span>© 2024 MUKESH YADAV</span><span>BUILT WITH CURIOSITY + CODE</span><a href="#top"
       class="magnetic">BACK TO TOP ↑</a></footer>
   <script src="https://unpkg.com/lucide@latest"></script>
